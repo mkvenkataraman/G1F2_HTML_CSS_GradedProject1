@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lab Test</title>
+    <!-- Linking the external CSS file for styling -->
+    <link rel="stylesheet" href="css/lab-test.css">
+</head>
+
+<body>
+
+    <section id="block">
+        <!-- Lab test form section -->
+        <form action="" id="lab-form">
+            <!-- Image for the lab test -->
+            <img src="../Assets/Lab-Test/lab-test.jpg" alt="Lab Test">
+
+            <!-- Newly added H1 tag for patient information -->
+            <h1>Patient Information</h1>
+
+            <!-- Section for contact details -->
+            <h2>1. Your Contact Details</h2>
+            <input type="text" title="patient_name" placeholder="Full Name" required>
+            <input type="text" title="patient_id" placeholder="Patient Id if exists" required>
+            <input type="tel" title="contact_no" placeholder="Contact Number" required>
+            <input type="email" title="email" placeholder="Email id" required>
+
+            <!-- Section for address -->
+            <h2>2. Address</h2>
+            <input type="text" title="h-no" placeholder="H-No" required>
+            <input type="text" title="street" placeholder="Street" required>
+            <input type="text" title="area" placeholder="Area" required>
+
+            <!-- Dropdown for district selection -->
+            <h4>District</h4>
+            <select name="District" id="district" required>
+                <option value="">Choose</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Bhopal">Bhopal</option>
+            </select>
+
+            <!-- Test type selection -->
+            <h2>3. Choose the Test Type</h2>
+            <p>(Check at least one box without fail)</p>
+            <input type="checkbox" id="c1" name="option1" value="CBC"><label for="c1">CBC</label><br>
+            <input type="checkbox" name="option2" id="c2" value="Complete Urine"><label for="c2">Complete
+                Urine</label><br>
+            <input type="checkbox" name="option3" id="c3" value="Lipid Profile"><label for="c3">Lipid
+                Profile</label><br>
+            <input type="checkbox" name="option4" id="c4" value="Thyroid Stimulating Hormone(TSH)"><label
+                for="c3">Thyroid Stimulating Hormone(TSH)</label><br>
+            <input type="checkbox" name="option5" id="c4" value="Glucose Test"><label for="c3">Glucose Test</label>
+
+            <!-- Option for hard copy of report -->
+            <h2>4. Do you want a hard copy of the report also?</h2>
+            <input type="radio" name="option" id="c5" value="True" required><label for="c5">Yes</label>
+            <input type="radio" name="option" id="c6" value="False" required><label for="c6">No</label>
+
+            <!-- Date and time selection -->
+            <h2>5. Select Your Comfortable Date and Time</h2>
+            <input type="date" name="date" required><br>
+            <input type="time" name="time" required>
+        </form>
+
+        <!-- Reset and Submit buttons -->
+        <button form="lab-form">Reset</button>
+        <button form="lab-form">Submit</button>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <!-- Copyright notice -->
+        @copyright. Only for demonstration purposes.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+body,
+html {
+  height: 100%;
+  /* Ensures the full height of the page is used */
+  margin: 0;
+  /* Resets any default margin */
+  padding: 0;
+  /* Resets any default padding */
+  font-family: Arial, sans-serif;
+  /* Sets a consistent font across the page */
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the element's total width and height */
+  /*overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  /* Ensures that all elements inherit box-sizing from html/body */
+}
+
+.header h1 {
+  margin: 0;
+  /* Changed from 'margin: 1;' to 'margin: 0;' */
+  padding: 0;
+}
+
+.header {
+  position: fixed;
+  /* Fixes the header at the top of the viewport */
+  top: 0;
+  left: 0;
+  /* Ensures the header extends from the left edge */
+  right: 0;
+  /* Ensures the header extends to the right edge, making it full width */
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  /* Provides padding at the top and bottom of the header */
+  width: 100%;
+  /* Ensures the header spans the full width of the viewport */
+  z-index: 1000;
+  /* Ensures the header stays above all other content */
+}
+
+.navbar {
+  display: flex;
+  background-color: #5c5b5b;
+  position: sticky;
+  /* Changed from sticky to relative */
+  top: 100;
+  z-index: 99;
+  /* Adjust if necessary to ensure proper stacking */
+  align-items: center;
+  padding: 0;
+  width: 100%;
+  margin-top: 65px;
+  /* Adjust this value based on the actual height of your header */
+}
+
+.navbar {
+  display: flex;
+  background-color: #5c5b5b;
+  /* position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 60px;
+  /* This value should be equal to the height of your header */
+  z-index: 99;
+  /* Adjust if necessary to ensure proper stacking */
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+.navbar a,
+.navbar .dropbtn {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  display: block;
+  border: none;
+  font-size: 16px;
+}
+
+.navbar a:hover,
+.navbar .dropbtn:hover {
+  background-color: #777;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  left: 0;
+  /* Ensures the footer extends fully from left to right */
+  right: 0;
+  /* Complements the left property for full width */
+  bottom: 0;
+  /* Keeps the footer at the bottom of the viewport */
+  width: 100%;
+  /* Ensures the footer spans the full width of the viewport */
+  font-size: 12px;
+  /*box-shadow: 0px -2px 5px rgba(0,0,0,0.2); /* Adds shadow for depth */
+  z-index: 50;
+  /* Ensures the footer is above most content but below fixed elements like a modal */
+}
+
+.image-slider {
+  width: 100%;
+  height: 490px;
+  /* Adjust the height as needed */
+  background-size: cover;
+  animation: slideShow 40s infinite linear;
+  /* Adjust total duration as desired */
+  border: 2px solid steelblue;
+  /* As specified */
+  overflow: hidden;
+  /* Prevents horizontal scroll */
+  margin: 0 auto;
+  /* Centers the slider if there's horizontal space */
+}
+
+/* Keyframes for the slideshow animation */
+@keyframes slideShow {
+  0% {
+    background-image: url('../Assets/Animation/ani1.jpg');
+  }
+
+  25% {
+    background-image: url('../Assets/Animation/ani2.png');
+  }
+
+  50% {
+    background-image: url('../Assets/Animation/ani3.jpg');
+  }
+
+  75% {
+    background-image: url('../Assets/Animation/ani4.jpg');
+  }
+
+  100% {
+    background-image: url('../Assets/Animation/ani5.jpg');
+  }
+}
+
+/* Adjust the .content top margin to prevent it from hiding under the navbar */
+.content {
+  padding-top: 20px;
+  /* Adjust this value so the content starts below the navbar */
+  padding-bottom: 60px;
+  /* Keep space for the footer */
+  overflow-y: auto;
+  margin-top: -10px;
+  /* Adjust based on the combined heights of header and navbar */
+}
+
+.product-section {
+  padding: 10px;
+  /* Spacing inside each section */
+  margin: 10px 0;
+  /* Spacing between sections */
+  background-color: #f5f5f5;
+  /* A light background for the section */
+  border-radius: 8px;
+  /* Optional: Adds rounded corners to the sections */
+  border: 2px solid black;
+  /* As specified */
+}
+
+.product-section {
+  padding: 10px;
+  /* Spacing inside each section */
+  margin: 10px 0;
+  /* Spacing between sections */
+  text-align: left;
+  background-color: #ffffff;
+  /* Set the background to white */
+  border-radius: 8px;
+  /* Optional: Adds rounded corners to the sections */
+  border: 2px solid black;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.product {
+  width: 220px;
+  /* Set the width of the product item */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  /*  border: 1px solid black; /* Border around the product item */
+  background-color: #f5f5f5;
+  /* Very light grey background for product containers */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 0;
+  /* Removes space between child elements */
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  /* Slightly increase size on hover */
+}
+
+.product img {
+  width: 200px;
+  /* Width of the product image */
+  height: 180px;
+  /* Height of the product image */
+  object-fit: contain;
+  margin: 0;
+  /* Center the image horizontally */
+  border: 1px solid #ddd;
+  /* Optional: Adds a border around the image */
+}
+
+.product-name,
+.price,
+.offer {
+  width: 100%;
+  /* Makes text span the full width of the container */
+  margin: 5px 0;
+  /* Adds some spacing around the text */
+}
+
+h4.price,
+h4.offer {
+  font-size: 14px;
+  /* Sets the font size */
+  color: rgb(43, 124, 230);
+  /* Specific blue color */
+  margin: 0;
+  /* Maintains the margin */
+  font-weight: normal;
+  /* Keeps the text not bold */
+}
+
+.add-to-cart {
+  width: 100%;
+  padding: 5px;
+  border: 2px solid steelblue;
+  border-radius: 8px;
+  margin-top: auto;
+  /* Pushes the button to the bottom */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  align-self: center;
+  /* Center the button within the product container */
+}
+
+.add-to-cart:hover {
+  background-color: rgb(250, 234, 230);
+  border-color: rgb(0, 255, 76);
+}
